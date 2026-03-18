@@ -103,38 +103,29 @@ h1, h2, h3 {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 10rem 0 6rem;
+    padding: 12rem 0 8rem;
     overflow: hidden;
     text-align: center;
+    background: url('assets/school.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(4px);
+    z-index: 0;
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+    display: none;
 }
 
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-}
-
-.blob-1 {
-    width: 400px;
-    height: 400px;
-    background: var(--primary-light);
-    top: -100px;
-    right: -100px;
-}
-
-.blob-2 {
-    width: 500px;
-    height: 500px;
-    background: var(--secondary-light);
-    bottom: -100px;
-    left: -100px;
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
